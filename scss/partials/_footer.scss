@@ -1,0 +1,150 @@
+/* ----------------- footer
+----------------------------------------------------------------------- */
+.footer {
+	@include float-primary;
+	background-color: #e9e9ea;
+	border-bottom: 5px solid #242D7E;
+	.wrapper {
+		.footer-logo {
+			float: right;
+			padding: 4px 0 0 25px;
+			@include breakpoint (tablet) {
+				display: none;
+			}
+			@include breakpoint (mobile) {
+				display: none;
+			}
+			a {
+				display: block;
+				img {
+					max-width: 100%;
+					height: auto;
+				}
+			}
+		}
+		.footer-menu {
+			float: right;
+			@include breakpoint (tablet) {
+				float: none;
+				text-align: center;
+			    border-bottom: 1px solid #DCC6C6;
+			}
+			@include breakpoint (mobile) {
+				float: none;
+				width: 100%;
+			}
+			ul {
+				width: 100%;
+				@include breakpoint (tablet) {
+					display: inline-block;
+					width: inherit;
+				}
+				li {
+					float: left;
+					@include breakpoint (mobile) {
+						width: 100%;
+						border-top: 1px solid #B0C8DB;
+					}
+					a {
+					    display: block;
+					    padding: 10px 10px;
+					    text-decoration: none;
+					    font-family: "Lato";
+					    line-height: 28px;
+					    color: #ABB7C1;
+					    &:hover {
+					    	color: #242D7E;
+					    	transition: 0.3s all ease;
+					    }
+					    @include breakpoint (mobile) {
+							width: 100%;
+							text-align: center;
+							&:hover {
+							    color: #eee;
+							    transition: 0.3s all ease;
+							    font-weight: bold;
+							    background-color: rgba(36,45,126,0.8);								
+							}
+						}
+					} 
+				}
+				.border-top {
+					border: none;
+				}
+			}
+		}
+		.social-menu {
+			@include float-primary;
+			display: flex;
+			justify-content: center;
+			border-top: 1px solid #DCC6C6;
+			ul {
+				li {
+					float: left;
+					a {
+						padding: 10px;
+						display: block;
+						&:hover {
+						}
+						.fa {
+							color: #ABB7C3;
+							&:hover {
+								color: indianred;
+								transition: all 0.3s ease;
+							}
+						}
+						.fa-facebook {
+							&:hover {
+								color: #242D7E;
+								transition: all 0.3s ease;								
+							}
+						}
+						.fa-twitter {
+							&:hover {
+								color: #00aced;
+								transition: all 0.3s ease;								
+							}
+						}
+						.fa-google-plus {
+							&:hover {
+								color: #d34836;
+								transition: all 0.3s ease;								
+							}
+						}
+						.fa-linkedin {
+							&:hover {
+								color: #0077B5;
+								transition: all 0.3s ease;								
+							}							
+						}					
+					}
+				}
+			}
+		}
+		.copy {
+			float: left;
+		    padding: 10px 0 0 0;
+			@include breakpoint (tablet) {
+				width: 100%;
+			}
+			@include breakpoint (mobile) {
+				width: 100%;
+			}
+			p {
+				line-height: 30px;
+				font-family: "Lato";
+				color: #242D7E;
+				@include breakpoint (tablet) {
+					text-align: center;
+				}
+				@include breakpoint (mobile) {
+					text-align: center;
+				}
+				strong {
+					font-weight: bold;
+				}
+			}
+		}
+	} 	
+}
+

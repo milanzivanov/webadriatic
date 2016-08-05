@@ -1,0 +1,328 @@
+/* ----------------- Libraries
+----------------------------------------------------------------------- */
+
+@import "compass";
+@import "config/reset";
+@import "config/variables";
+   
+/* ----------------- Helpers
+----------------------------------------------------------------------- */
+
+@import "helpers/mixins";
+@import "helpers/helpers";
+@import "helpers/ie";
+
+/* ----------------- Base
+----------------------------------------------------------------------- */
+
+@import "base/layout";
+@import "base/typography";
+
+/* ----------------- Layout
+----------------------------------------------------------------------- */
+
+/* ----------------- Lib
+----------------------------------------------------------------------- */
+
+/* ----------------- Layout
+----------------------------------------------------------------------- */
+
+@import "layout/buttons";
+@import "layout/forms";
+@import "layout/icons";
+
+/* ----------------- Partials
+----------------------------------------------------------------------- */
+
+@import "partials/footer";
+@import "partials/header";
+
+
+/* ----------------- scss main
+----------------------------------------------------------------------- */
+
+.flexslider {
+    @include float-primary;
+	border: 0;
+	margin: 0 0 0 0;
+    border-bottom: 5px solid #242D7E;
+    border-radius: 0;
+	.slides {
+		li {
+			position: relative;
+			img {
+				width: 100%;
+				max-height: 443px;
+			}
+			.wrapper {
+			    position: absolute;
+			    height: 100%;
+			    left: 0;
+			    right: 0;
+			    top: 0;
+				.slider-header-right {
+					position: absolute;
+					@include vertical-align;
+					right: 0;
+					@include breakpoint (tablet) {
+				    	//@include centre (both);
+				    	right: 40px;
+				    }
+					@include breakpoint (mobile) {
+				    	//@include centre (both);
+				    	right: 40px;
+				    }
+					p {
+						color: #fff;
+						font-family: 'Roboto', sans-serif;
+						font-size: 50px;
+						font-weight: bold;
+						text-shadow: 2px 2px 2px #232121;
+						@include breakpoint (tablet) {
+					    	font-size: 40px;
+					    }
+						@include breakpoint (mobile) {
+					    	font-size: 35px;
+					    }						
+					}
+				}
+				.slider-header-left {
+					position: absolute;
+					@include vertical-align;
+					left: 0;
+					@include breakpoint (tablet) {
+				    	//@include centre (both);
+				    	left: 40px;
+				    }
+					@include breakpoint (mobile) {
+				    	//@include centre (both);
+				    	left: 40px;
+				    }
+					p {
+						color: indianred;
+						font-family: 'Roboto', sans-serif;
+						font-size: 47px;
+						font-weight: bold;
+						text-shadow: 1px 1px 1px #634F4F;
+						@include breakpoint (tablet) {
+					    	font-size: 40px;
+					    }
+						@include breakpoint (mobile) {
+					    	font-size: 35px;
+					    }	
+					}
+				}
+			}
+		}
+	}
+}
+
+.flex-control-nav {
+    width: 100%;
+    position: absolute;
+    bottom: 40px;
+    text-align: center;
+    z-index: 9;
+    @include breakpoint (tablet) {
+    	display: none;
+    }
+    @include breakpoint (mobile) {
+    	display: none;
+    }
+}
+
+#secondary-slider {
+	width: 100%;
+	float: left;
+	border-bottom: none;
+	padding: 20px 0 20px 0;
+	opacity: 0.7;
+	&:hover {
+		transition: all 0.3s ease;
+		opacity: 1;
+	}
+	.wrapper {
+		.slides {
+			li {
+				position: relative;
+				img {
+					max-width: 100%;
+					max-height: 150px;
+				}
+			}
+		}
+	}
+}
+
+
+.main {
+	@include float-primary;
+	.wrapper {
+		.box {
+			position: relative;
+		    width: 33.333%;
+		    float: left;
+		    padding: 20px;
+		    position: relative;
+		    @include breakpoint (tablet) {
+		    	width: 100%;
+		    }
+		    @include breakpoint (mobile) {
+		    	width: 100%;
+		    }
+			.botton {
+			    display: block;
+			    padding: 20px 0;
+			    text-align: center;
+			    font-family: "Lato";
+			    font-weight: bold;
+			    text-decoration: none;
+			    color: #242D7E;
+			    font-size: 21px;
+			    border-bottom: 1px solid #f5f5f5;
+			}
+			p {
+				font-family: Lato;
+				color: #4C565F;
+				padding: 30px 0;
+				font-size: 15px;
+				line-height: 27px;
+			    @include breakpoint (mobile) {
+			    	text-align: justify;
+			    }
+			}
+			.read-more {
+			    float: right;
+			    color: #ABB7C1;
+			    text-decoration: none;
+				font-weight: bold;
+				font-family: "Roboto";
+			    bottom: 0;
+			    position: absolute;
+			    right: 20px;
+				&:hover {
+			    	color: indianred;
+			    	transition: all 0.3s ease-in-out;					
+				}
+			    .fa {
+			    	opacity: 0;
+			    	font-weight: bold;
+			    }
+			    &:hover > .fa {
+			    	opacity: 1;
+			    	color: indianred;
+			    	transition: all 0.3s ease-in-out;
+			    } 
+			}
+			ul {
+				width: 100%;
+				li {
+					a {
+						border-bottom: 1px solid #f5f5f5;
+					    display: block;
+					    padding: 15px 0;
+					    font-size: 21px;
+					    font-family: Lato;
+					    text-decoration: none;
+					    color: #B0B7C3;
+					    text-align: center;
+					    &:hover {
+					    	color: indianred;
+					    	transition: all 0.3s ease-in-out;
+					    }
+					}
+					.bottom-border {
+						border: none;
+					}
+				}
+			}
+			.col {
+				float: left;
+				width: 100%;
+				padding: 20px 0 0 0;
+				.product-img {
+				    float: left;
+				    width: 30%;
+				    img {
+					    max-width: 100%;
+					    height: auto;
+					    display: inline-block;
+					    @include breakpoint (tablet) {
+					    	padding: 0 0 0 60px;
+					    }				    	
+				    }
+				}
+				.product-text {
+				    float: left;
+				    width: 70%;
+				    padding: 0 0 0 15px;
+				    p {
+					    padding: 0 0 0 15px;
+					    line-height: 21px;
+					    @include breakpoint (mobile) {
+					    	text-align: justify;
+					    }
+					    span {
+					    	color: #242D7E;
+					    	font-weight: bold;
+					    }
+				    }
+				}
+			}
+		}
+		.clients {
+			@include float-primary;
+			h3 {
+				text-align: center;
+				font-size: 21px;
+				color: #242D7E;
+				font-family: "Lato";
+				font-weight: bold;
+				padding: 20px 0;
+    			border-bottom: 1px solid #f5f5f5;			
+			}
+			p {
+				font-size: 15px;
+				font-family: "Lato";
+				color: #4C565F;
+				padding: 20px 0 20px 0;
+				border-bottom: 1px solid #f5f5f5;
+				line-height: 21px;
+				text-align: center;
+				@include breakpoint (mobile) {
+					padding: 10px;
+				}			
+			}
+		}
+		.read-more {
+		    float: right;
+		    color: #ABB7C1;
+		    text-decoration: none;
+			font-weight: bold;
+			font-family: "Roboto";
+			padding: 0 0 20px 0;
+			&:hover {
+		    	color: indianred;
+		    	transition: all 0.3s ease-in-out;					
+			}
+		    .fa {
+		    	opacity: 0;
+		    	font-weight: bold;
+		    }
+		    &:hover > .fa {
+		    	opacity: 1;
+		    	color: indianred;
+		    	transition: all 0.3s ease-in-out;
+		    } 
+		}
+		#read-more-clients {
+			@include breakpoint (tablet) {
+				padding: 0 20px 20px 0;
+			}
+			@include breakpoint (mobile) {
+				padding: 0 20px 20px 0;
+			}
+		}
+	}
+}
+
